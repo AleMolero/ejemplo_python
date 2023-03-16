@@ -41,3 +41,5 @@ end_time = datetime.now()
 total_time = end_time - init_time
 # Mostramos ese tiempo en segundos.
 print(f"\n Tardaste {total_time.seconds} segundos. y tuviste { aciertos} resultados correctos y {5-aciertos} incorrectos.")
+if (aciertos==5 and total_time.seconds<20.0):
+    print("BIEN HECHO!!")
