@@ -26,8 +26,8 @@ for i in range(0, times):
         case "*":
             correct= number_1 * number_2
         case "/":
-            while (number_2==0):
-                number_2 = randrange(10)
+            if (number_2==0):
+                number_2 = randrange(1,10)
             correct= number_1 / number_2
     correct= float(correct)
     correct= round(correct,2) 
