@@ -14,10 +14,6 @@ for i in range(0, times):
     number_1 = randrange(10)
     number_2 = randrange(10)
     operator = choice(operators)
-    # Se imprime la cuenta.
-    print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
-    # Le pedimos al usuario el resultado
-    result = input("resultado: ")
     match operator:
         case "+":
             correct= number_1 + number_2
@@ -29,8 +25,13 @@ for i in range(0, times):
             if (number_2==0):
                 number_2 = randrange(1,10)
             correct= number_1 / number_2
-    correct= float(correct)
-    correct= round(correct,2) 
+    # Se imprime la cuenta.
+    print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
+    # Le pedimos al usuario el resultado
+    result = input("resultado: ")
+    
+    # estandarizo en tipo y cantidad de decimales ambos valores
+    correct= round(float(correct),2)
     result = round(float(result) , 2)
     if (result == correct):
         aciertos+=1
