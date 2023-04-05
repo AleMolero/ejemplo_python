@@ -35,6 +35,9 @@ for i in range(0, times):
     result = round(float(result) , 2)
     if (result == correct):
         aciertos+=1
+        print(' CORRECTO')
+    else:
+        print(' INCORRECTO')
 
     
 # Al terminar toda la cantidad de cuentas por resolver.
